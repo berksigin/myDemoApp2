@@ -31,9 +31,11 @@ public class AppTest
     /**
      * Rigourous Test :-)
      */
-    public void testApp()
+    public void testFound2()
     {
-        assertTrue( true );
+        ArrayList<Integer> array = new ArrayList<>(Arrays.asList(3, 4, 5, 6));
+        Integer[] arr={2,3,4,5};
+        assertFalse(new App().search2(arr, array, 3, 3));
     }
     
  public void testFound() {
