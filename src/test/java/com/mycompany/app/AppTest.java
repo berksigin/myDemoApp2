@@ -39,8 +39,9 @@ public class AppTest
  public void testFound() {
 
     ArrayList<Integer> array = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
+    Integer[] arr={2,3,4,5};
 
-    assertTrue(new App().search(array, 4));
+    assertTrue(new App().search2(arr, array, 3, 3));
 
   }
 
@@ -48,8 +49,9 @@ public class AppTest
   public void testNotFound() {
 
     ArrayList<Integer> array = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
+    Integer[] arr={2,3,4,5};
 
-    assertFalse(new App().search(array, 5));
+    assertFalse(new App().search2(arr, array, 5, 5));
 
   }
 
@@ -57,15 +59,16 @@ public class AppTest
   public void testEmptyArray() {
 
     ArrayList<Integer> array = new ArrayList<>();
+    Integer[] arr=new Integer[4];
 
-    assertFalse(new App().search(array, 1));
+    assertFalse(new App().search2(arr, array, 1, 1));
 
   }
 
 
   public void testNull() {
 
-    assertFalse(new App().search(null, 1));
+    assertFalse(new App().search2(null, null, 1, 1));
 
   }
 
